@@ -17,8 +17,13 @@ def resultado():
 	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
 
 	cliente= MongoClient(uri)
-	
 
-	return template ('template2', cliente=cliente)
+	contenido=[]
+
+	for resultado in db.cliente.fin():
+			contenido.append(resultado)
+
+
+	return template ('template2', contenido=contenido)
 
 run(host='0.0.0.0',port=argv[1])
