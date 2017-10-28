@@ -19,10 +19,10 @@ def resultado():
 	cliente= MongoClient(uri)
 
 	db=cliente.col
+	db2=db.col
+	cursor= db2.find()
 
-	#cursor= db.col.find()
 
-
-	return template ('template2', cursor=cliente)
+	return template ('template2', cursor=cursor)
 
 run(host='0.0.0.0',port=argv[1])
