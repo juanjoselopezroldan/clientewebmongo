@@ -22,6 +22,7 @@ def resultado():
 
 	res=db.db.find()
 
+	
 
 	return template ('template2', res=res)
 
