@@ -20,13 +20,13 @@ def resultado():
 	
 	db=cliente.col
 
-	cursor= db.col.find()
+	#cursor= db.col.find()
 
-#	contenido=[]
+	contenido=[]
 
-#	for res in cursor:
-#		contenido.append(res)
+	for result in db.col.find().count():
+		contenido.append(result)
 
-	return template ('template2', cursor=cursor)
+	return template ('template2', cursor=contenido)
 
 run(host='0.0.0.0',port=argv[1])
