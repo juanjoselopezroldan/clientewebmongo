@@ -2,6 +2,7 @@ import pymongo
 from pymongo import MongoClient, GEO2D
 import bottle
 from  bottle import Bottle,route,run,request,template,static_file,default_app,get
+from sys import argv
 
 @route ('/', method="get" )
 def inicio():
