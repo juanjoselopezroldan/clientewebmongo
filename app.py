@@ -5,7 +5,7 @@ from  bottle import Bottle,route,run,request,template,static_file,default_app,ge
 
 @route ('/', method="get" )
 def inicio():
-	return template ('template1.tpl')
+	return template ('template.tpl')
 
 @route ('/resultado'method="post")
 def resultado():
