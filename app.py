@@ -20,11 +20,11 @@ def resultado():
 
 	db=cliente.col
 
-	res=db.db.find()
+	cursor=db.db.find()
 
 	result=[]
 
-	for resultado in res:
+	for resultado in cursor:
 		result.append(resultado)
 
 	return template ('template2', result=result)
