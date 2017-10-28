@@ -15,7 +15,8 @@ def resultado():
 	col = request.forms.get('coleccion')
 
 	uri= "mongo://"+usu+":"+cla+"/"+col
-	
+
+	cliente= MongoClient (uri)
 
 	return template ('template2', usuario=usu, clave=cla, coleccion=col)
 
