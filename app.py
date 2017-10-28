@@ -20,7 +20,7 @@ def resultado():
 
 	contenido=[]
 
-	for resultado in db.cliente.fin():
+	for resultado in db.cliente.find():
 			contenido.append(resultado)
 
 
