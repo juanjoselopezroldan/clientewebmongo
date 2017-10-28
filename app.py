@@ -27,6 +27,6 @@ def resultado():
 	for resultado in res:
 		result.append(resultado)
 
-	return template ('template2', res=res)
+	return template ('template2', result=result)
 
 run(host='0.0.0.0',port=argv[1])
