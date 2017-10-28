@@ -18,6 +18,6 @@ def resultado():
 
 	cliente= MongoClient (uri)
 
-	return template ('template2', usuario=usu, clave=cla, coleccion=col)
+	return template ('template2', cliente=cliente)
 
 run(host='0.0.0.0',port=argv[1])
