@@ -14,6 +14,8 @@ def resultado():
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
 
+	uri= "mongo://"+usu+":"+cla+"/"+col
+	
 
 	return template ('template2', usuario=usu, clave=cla, coleccion=col)
 
