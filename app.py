@@ -14,16 +14,18 @@ def resultado():
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
 
-	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
+	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017"
 
 	cliente= MongoClient(uri)
 
-	contenido=[]
+#	db=cliente.
 
-	for resultado in db.cliente.find():
-			contenido.append(resultado)
+#	contenido=[]
+
+#	for resultado in db.cliente.find():
+#			contenido.append(resultado)
 
 
-	return template ('template2', contenido=contenido)
+	return template ('template2', cliente=cliente)
 
 run(host='0.0.0.0',port=argv[1])
