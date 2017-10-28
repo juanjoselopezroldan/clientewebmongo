@@ -3,10 +3,10 @@
 <br>
 <div>
 	<form action="/resultado" method="post" style="float: center">
-		<label>Sitio (Ej. "Sevilla", "C/Oripo"):</label>
-		<input type="text" name="sitio" required/><br>
-		<label>Tipo (Ej. "Restaurante", "Estadios", "Cines"):</label>
-		<input type="text" name="lugar" required/><br>
+		<label>Usuario de MongoDB: </label>
+		<input type="text" name="usuario" required/><br>
+		<label>Clave :</label>
+		<input type="text" name="clave" required/><br>
 		<br><br><br>
 		<input type="submit" value="Buscar">
 	</form>
