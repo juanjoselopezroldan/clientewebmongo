@@ -11,3 +11,4 @@ def inicio():
 def resultado():
 	usu = request.forms.get('usuario')
 	cla = request.forms.get('clave')
+	return template ('template2', usuario=usu, clave=cla)
