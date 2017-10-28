@@ -7,7 +7,7 @@
 		<input type="text" name="usuario" required/><br>
 		<label>Clave :</label>
 		<input type="password" name="clave" required/><br>
-		<label>Coleccion a ver: </label>
+		<label> Nombre Coleccion: </label>
 		<input type="text" name="coleccion" required/><br>
 		<br><br><br>
 		<input type="submit" value="Buscar">
