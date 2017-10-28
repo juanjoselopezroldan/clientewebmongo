@@ -20,7 +20,7 @@ def resultado():
 
 	db=cliente.col
 
-	res=db
+	res=db.db.find()
 
 
 	return template ('template2', res=res)
