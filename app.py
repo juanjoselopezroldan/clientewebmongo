@@ -21,11 +21,11 @@ def resultado():
 	db=cliente[col]
 
 	cursor= db.db.find()
-	contenido=[]
+#	contenido=[]
 
-	for result in cursor["city"]:
-		contenido.append(result)
+#	for result in cursor:
+#		contenido.append(result)
 
-	return template ('template2', cursor=contenido)
+	return template ('template2', cursor=cursor)
 
 run(host='0.0.0.0',port=argv[1])
