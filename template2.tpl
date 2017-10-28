@@ -1,3 +1,3 @@
 %include('header.tpl')
-<h1>{{cliente}}</h1>
+<h1>{{res}}</h1>
 %include('footer.tpl')
