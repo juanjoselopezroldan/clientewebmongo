@@ -20,7 +20,7 @@ def resultado():
 
 #	db=cliente.col
 
-	cursor=db.col.find()
+	cursor= db.col.find()
 
 	result=[]
 
