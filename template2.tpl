@@ -1,6 +1,6 @@
 %include('header.tpl')
 <h1>Resultado de Mongo</h1>
-	% for res in cursor:
-		<h1>{{res}}</h1>
+	%for resultado in cursor:
+		<h5>{{resultado}}</h5>
 	%end
 %include('footer.tpl')

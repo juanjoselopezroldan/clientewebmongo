@@ -16,15 +16,14 @@ def resultado():
 	
 	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
 
-	cliente= MongoClient(uri)
+	cliente= pymongo.MongoClient(uri)
 	
-	db=cliente.col
+	db=cliente[col]
 
-	#cursor= db.col.find()
-
+	cursor= db.db.find()
 	contenido=[]
 
-	for result in db.col.find():
+	for result in cursor["city"]:
 		contenido.append(result)
 
 	return template ('template2', cursor=contenido)
