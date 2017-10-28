@@ -14,6 +14,7 @@ def resultado():
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
 
+
 	return template ('template2', usuario=usu, clave=cla, coleccion=col)
 
 run(host='0.0.0.0',port=argv[1])
