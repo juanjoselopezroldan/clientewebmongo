@@ -18,14 +18,11 @@ def resultado():
 
 	cliente= MongoClient(uri)
 
-#	db=cliente.
+	db=cliente.col
 
-#	contenido=[]
-
-#	for resultado in db.cliente.find():
-#			contenido.append(resultado)
+	res=db
 
 
-	return template ('template2', cliente=cliente)
+	return template ('template2', res=res)
 
 run(host='0.0.0.0',port=argv[1])
