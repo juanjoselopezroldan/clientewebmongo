@@ -14,7 +14,7 @@ def resultado():
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
 
-	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:/"+col
+	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
 
 	cliente= MongoClient(uri)
 
