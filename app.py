@@ -7,7 +7,7 @@ from  bottle import Bottle,route,run,request,template,static_file,default_app,ge
 def inicio():
 	return template ('template.tpl')
 
-@route ('/resultado'method="post")
+@route ('/resultado', method="post")
 def resultado():
 	usu = request.forms.get('usuario')
 	cla = request.forms.get('clave')
