@@ -18,9 +18,9 @@ def resultado():
 
 	cliente= MongoClient(uri)
 
-	db=cliente.col
+	db=cliente.test
 
-	cursor= db.find()
+	cursor= db.col.find()
 
 
 	return template ('template2', cursor=cursor)
