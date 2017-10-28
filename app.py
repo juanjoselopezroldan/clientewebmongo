@@ -22,11 +22,7 @@ def resultado():
 
 	cursor= db.db.find()
 
-	result=[]
 
-	for resultado in cursor:
-		result.append(resultado)
-
-	return template ('template2', result=result)
+	return template ('template2', cursor=cursor)
 
 run(host='0.0.0.0',port=argv[1])
