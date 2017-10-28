@@ -14,7 +14,7 @@ def resultado():
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
 	
-	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017"
+	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
 
 	cliente= MongoClient(uri)
 	
@@ -24,7 +24,7 @@ def resultado():
 
 	contenido=[]
 
-	for result in db.col.find().count():
+	for result in db.col.find():
 		contenido.append(result)
 
 	return template ('template2', cursor=contenido)
