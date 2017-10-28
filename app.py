@@ -2,7 +2,7 @@ import pymongo
 from pymongo import MongoClient, GEO2D
 import bottle
 from  bottle import Bottle,route,run,request,template,static_file,default_app,get
-from sys import argv
+from sys import *
 
 @route ('/', method="get" )
 def inicio():
@@ -20,12 +20,12 @@ def resultado():
 	
 	db=cliente.col
 
-	cursor= db.col.find_one()
+	cursor= db.col.find()
 
-	contenido=[]
+#	contenido=[]
 
-	for res in cursor:
-		contenido.append(res)
+#	for res in cursor:
+#		contenido.append(res)
 
 	return template ('template2', cursor=cursor)
 
