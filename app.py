@@ -17,6 +17,7 @@ def resultado():
 	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
 
 	cliente= MongoClient(uri)
+	
 
 	return template ('template2', cliente=cliente)
 
