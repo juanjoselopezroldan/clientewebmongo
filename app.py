@@ -18,9 +18,9 @@ def resultado():
 
 	cliente= MongoClient(uri)
 
-	db=cliente.col
+#	db=cliente.col
 
-	cursor=db.db.find()
+	cursor=db.col.find()
 
 	result=[]
 
