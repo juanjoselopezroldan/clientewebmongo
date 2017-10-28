@@ -22,7 +22,10 @@ def resultado():
 
 	res=db.db.find()
 
-	
+	result=[]
+
+	for resultado in res:
+		result.append(resultado)
 
 	return template ('template2', res=res)
 
