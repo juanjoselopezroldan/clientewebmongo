@@ -17,7 +17,7 @@ def resultado(query):
 	
 	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
 
-	response.set_cookie('uri',uri)
+	uri= request.get_query('uri')
 	
 	cliente= pymongo.MongoClient(uri)
 	db= cliente.col
