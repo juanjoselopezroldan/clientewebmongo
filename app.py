@@ -21,7 +21,7 @@ def resultado():
 	
 	db=cliente[col]
 
-	cursor= db.find({})
+	cursor= db.find()
 #	contenido=[]
 
 #	for result in cursor:
