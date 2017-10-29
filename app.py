@@ -14,12 +14,13 @@ def resultado():
 	usu = request.forms.get('usuario')
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
+	base="test"
 	
-	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/test"
+	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+base
 
 	cliente= pymongo.MongoClient(uri)
 	
-	db=cliente.col
+	db=cliente.base
 
 	coleccion=db[db]
 
