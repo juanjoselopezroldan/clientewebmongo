@@ -20,15 +20,14 @@ def resultado():
 
 	cliente= pymongo.MongoClient(uri)
 	
-	db=cliente.base
-
-	coleccion=db[db]
+	db=cliente.col
 
 	cursor= coleccion.find()
-	# contenido=[]
+	
+	contenido=[]
 
-	# for result in cursor:
-	# 	contenido.append(result)
+	for result in cursor:
+	 	contenido.append(result)
 
 	return template ('template2', cursor=cursor)
 
