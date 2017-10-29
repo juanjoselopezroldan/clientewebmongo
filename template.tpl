@@ -7,6 +7,8 @@
 		<input type="text" name="usuario" required/><br>
 		<label>Clave :</label>
 		<input type="password" name="clave" required/><br>
+		<label> Base de datos: </label>
+		<input type="text" name="db" required/><br>
 		<label> Nombre Coleccion: </label>
 		<input type="text" name="coleccion" required/><br>
 		<br><br><br>

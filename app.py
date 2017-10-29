@@ -12,20 +12,21 @@ def inicio():
 def resultado():
 	usu = request.forms.get('usuario')
 	cla = request.forms.get('clave')
+	ba = request.forms.get('db')
 	col = request.forms.get('coleccion')
 	
-	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+ba
+	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109/"+ba
 
 	cliente= pymongo.MongoClient(uri)
 	
-	coleccion=cliente[col]
+	db=cliente[col]
 
-	cursor= db.coleccion.find()
-	contenido=[]
+	cursor= db.find({})
+#	contenido=[]
 
-	for result in cursor:
-		contenido.append(result)
+#	for result in cursor:
+#		contenido.append(result)
 
-	return template ('template2', cursor=contenido)
+	return template ('template2', cursor=cursor)
 
 run(host='0.0.0.0',port=argv[1])
