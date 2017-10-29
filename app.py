@@ -3,6 +3,7 @@ from pymongo import MongoClient, GEO2D
 import bottle
 from  bottle import Bottle,route,run,request,template,static_file,default_app,get
 from sys import *
+import json
 
 @route ('/', method="get" )
 def inicio():
@@ -12,10 +13,9 @@ def inicio():
 def resultado():
 	usu = request.forms.get('usuario')
 	cla = request.forms.get('clave')
-	ba = request.forms.get('db')
 	col = request.forms.get('coleccion')
 	
-	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109/"+ba
+	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109/test"
 
 	cliente= pymongo.MongoClient(uri)
 	
