@@ -10,24 +10,23 @@ def inicio():
 	return template ('template.tpl')
 
 @route ('/resultado', method="post")
-def resultado():
+def resultado(query):
 	usu = request.forms.get('usuario')
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
-	base="test"
 	
-	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+base
+	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
 
+	response.set_cookie('uri',uri)
+	
 	cliente= pymongo.MongoClient(uri)
-	
-	db=cliente.col
+	db= cliente.col
+	coleccion= db[query]
+	cursor= coleccion.find({})
+	# contenido=[]
 
-	cursor= coleccion.find()
-	
-	contenido=[]
-
-	for result in cursor:
-	 	contenido.append(result)
+	# for result in cursor:
+	#  	contenido.append(result)
 
 	return template ('template2', cursor=cursor)
 
