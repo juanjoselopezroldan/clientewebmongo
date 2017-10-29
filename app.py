@@ -16,12 +16,10 @@ def resultado(query):
 	col = request.forms.get('coleccion')
 	
 	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
-
-	uri= request.get_query('uri')
 	
 	cliente= pymongo.MongoClient(uri)
 	db= cliente.col
-	coleccion= db[query]
+	coleccion= db[uri]
 	cursor= coleccion.find({})
 	# contenido=[]
 
