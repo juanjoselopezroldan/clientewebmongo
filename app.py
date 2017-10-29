@@ -10,7 +10,7 @@ def inicio():
 	return template ('template.tpl')
 
 @route ('/resultado', method="post")
-def resultado(query):
+def resultado():
 	usu = request.forms.get('usuario')
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
