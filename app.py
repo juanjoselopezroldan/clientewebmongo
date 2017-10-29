@@ -15,17 +15,19 @@ def resultado():
 	cla = request.forms.get('clave')
 	col = request.forms.get('coleccion')
 	
-	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109/test"
+	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+col
 
 	cliente= pymongo.MongoClient(uri)
 	
-	db=cliente[col]
+	db=cliente.col
 
-	cursor= db.find()
-#	contenido=[]
+	coleccion=db[db]
 
-#	for result in cursor:
-#		contenido.append(result)
+	cursor= coleccion.find()
+	# contenido=[]
+
+	# for result in cursor:
+	# 	contenido.append(result)
 
 	return template ('template2', cursor=cursor)
 
