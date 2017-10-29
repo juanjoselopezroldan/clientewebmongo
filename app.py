@@ -12,7 +12,6 @@ def inicio():
 def resultado():
 	usu = request.forms.get('usuario')
 	cla = request.forms.get('clave')
-	ba = request.forms.get('db')
 	col = request.forms.get('coleccion')
 	
 	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/"+ba
