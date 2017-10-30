@@ -26,6 +26,6 @@ def resultado():
 	for result in cursor:
 	  	contenido.append(result)
 
-	return template ('template2', cursor=contenido)
+	return template ('template2', cursor=contenido, col=col)
 
 run(host='0.0.0.0',port=argv[1])
