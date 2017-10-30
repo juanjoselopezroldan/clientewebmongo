@@ -26,6 +26,11 @@ def resultado():
 	for result in cursor:
 	  	contenido.append(result)
 
-	return template ('template2', cursor=contenido, col=col)
+	if col == "zip":
+		return template ('template2', cursor=contenido, col=col)
+	elif col == "product":
+		return template ('template3', cursor=contenido, col=col)
+	else:
+		return template ('error', cursor=contenido, col=col)
 
 run(host='0.0.0.0',port=argv[1])
