@@ -19,8 +19,7 @@ def resultado():
 	
 	cliente= pymongo.MongoClient(uri)
 	db= cliente.col
-	coleccion= db
-	cursor= coleccion.find()
+	cursor= db.find()
 	# contenido=[]
 
 	# for result in cursor:
