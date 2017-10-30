@@ -16,7 +16,6 @@ def resultado():
 	col = request.forms.get('coleccion')
 	
 	uri= "mongodb://"+usu+":"+cla+"@172.22.200.109:27017/test"
-	#uri= "mongodb://admin:admin@172.22.200.109:27017/test"
 
 	cliente= MongoClient(uri)
 	datos= cliente['test']
