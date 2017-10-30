@@ -7,3 +7,5 @@ En el caso de necesitar este programa, saber que funciona correctamente ya que s
 realizado las pruebas necesarias que determinan su correcto funcionamiento.
 
 En dicho repositorio dejo el requirements.txt que indica que versiones de programas he llegado a utilizar.
+
+Ademas de ello dejo un documento en el que explico que realiza cada parte el programa.
