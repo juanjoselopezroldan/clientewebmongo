@@ -2,26 +2,10 @@
 <html>
 
 <head>
-  <title>MongoWebDB</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-<link rel="stylesheet" type="text/css" href="static/style/style.css" />
+  <title>MongoWeb</title>
 </head>
+
+
 <body>
-<div id="main">
-    <div id="header">
-      <div id="logo">
-		<div id="logo_text">
-			<h1>MongoWebDB</span></h1>
-		</div>
-        <div id="contact_details">
-        </div>
-      </div>
-      <div id="menubar">
-        <ul id="menu">
-          <li class="selected"><a href="..">Volver</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id="site_content">
-<div id="content">
+    <h1>Consulta de colecciones</h1>
+    <h2>MongoDB</h2>

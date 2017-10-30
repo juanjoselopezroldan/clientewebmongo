@@ -12,7 +12,6 @@
 		<br><br><br>
 		<input type="submit" value="Buscar">
 	</form>
-
 </div>
 <br>
 %include('footer.tpl')
