@@ -7,5 +7,5 @@
 
 
 <body>
-    <h1>Consulta de colecciones</h1>
-    <h2>MongoDB</h2>
+    <h1>MongoDB</h1>
+    <h2>Consulta de colecciones</h2>
